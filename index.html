@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="icon" href="assets/images/notas.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="change-theme-area">
+            <button data-switch-button class="switch-area">
+                <img class="theme-icon" data-theme-icon src="assets/images/moon-icon.svg" alt="theme-icon" />
+            </button>
+        </div>
+    </header>
+    <main>
+        <section data-section-note>
+            <button title="Cique para adicionar uma nova nota!" data-add-note class="add-area">
+                <h1>Adicionar nova nota</h1>
+                <img src="assets/images/plus-icon.svg" alt="plus" />
+            </button>
+        </section>
+        <div data-modal-note class="add-note-modal">
+            <div class="add-note-area">
+                <div class="add-note-header-area">
+                    <h1>Preencha às informações abaixo!</h1>
+                    <button>
+                        <img data-close-modal-button src="assets/images/close-icon.svg" alt="close" />
+                    </button>
+                </div>
+                <div>
+                    <label>
+                        Título da nota
+                        <input data-input-note="title" type="text" placeholder="Insira o título da nota" />
+                    </label>
+                    <label>
+                        Descrição
+                        <textarea
+                            data-input-note="description"
+                            type="text"
+                            placeholder="Insira a descrição da nota"
+                        ></textarea>
+                    </label>
+                    <label>
+                        Cor do texto da nota
+                        <input data-input-note="text-color" type="color" value="#FFFFFF" />
+                    </label>
+                    <label>
+                        Cor de fundo da nota
+                        <input data-input-note="background-color" value="#FFFFFF" type='color' />
+                    </label>
+                    <button data-save-note class="save-note-button">
+                        Salvar nota
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
