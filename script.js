@@ -58,6 +58,13 @@ function openModal(event, idNote) {
 
 function closeModal() {
     modalNoteArea.style.display = 'none';
+    resetInputs();
+}
+
+function resetInputs() {
+    for (const input of allInputsNote) {
+        input.value = '';
+    }
 }
 
 function createNewNote(
@@ -71,10 +78,7 @@ function createNewNote(
     const newNoteBlock = document.createElement('div');
     const createBin = document.createElement('button');
     const binIcon = document.createElement('img');
-    for (const input of allInputsNote) {
-        input.value = '';
-    }
-    
+
     binIcon.setAttribute('src', 'assets/images/bin-icon.svg');
     createBin.appendChild(binIcon);
     createBin.addEventListener('click', (event) => handleDeletePress(event, idItem));
