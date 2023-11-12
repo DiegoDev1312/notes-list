@@ -71,6 +71,9 @@ function createNewNote(
     const newNoteBlock = document.createElement('div');
     const createBin = document.createElement('button');
     const binIcon = document.createElement('img');
+    for (const input of allInputsNote) {
+        input.value = '';
+    }
     
     binIcon.setAttribute('src', 'assets/images/bin-icon.svg');
     createBin.appendChild(binIcon);
@@ -121,7 +124,6 @@ function handleSaveNote() {
         } else {
             backgroundNote = input.value;
         }
-        input.value = '';
     }
 
     if (!noteTitle.textContent) {
