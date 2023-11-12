@@ -48,6 +48,9 @@ button {
 }
 
 .switch-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 35px;
     width: 35px;
     border-radius: 20px;
