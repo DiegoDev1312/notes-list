@@ -18,8 +18,6 @@ function initNotes() {
     for (note of userNotes) {
         let noteTitle = document.createElement('h1');
         let noteDescription = document.createElement('p');
-        noteTitle.setAttribute('contenteditable', 'true');
-        noteDescription.setAttribute('contenteditable', 'true')
         noteTitle.innerHTML = note.title;
         noteDescription.innerHTML = note.description;
     
@@ -149,7 +147,6 @@ function handleSaveNote() {
             id: userNotes.length + 1,
         };
 
-    noteTitle.setAttribute('contenteditable', 'true');
     createNewNote(
         noteTitle,
         noteDescription,
